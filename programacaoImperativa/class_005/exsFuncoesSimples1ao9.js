@@ -26,7 +26,7 @@ let conversionWithExclamationMark = function (x){
     return x + '!';
 };
 
-conversionWithExclamationMark('A aula de "CTD - Programção Imperativa" é muito divertida');
+conversionWithExclamationMark('A aula de "CTD - Programação Imperativa" é muito divertida');
 console.log(conversionWithExclamationMark('A aula de "CTD - Programação Imperativa" é muito divertida'));
 
 // 4) Crie uma função que calcule a idade dos cachorros, considerando que 1 ano humano, equivale a 7 anos para eles.
