@@ -1,53 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Checkpoint 2</title>
 </head>
+
 <body>
-    <form action="#" method="POST">
-        <fieldset>
-            <legend>Dados pessoais</legend>
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" maxlength="100" placeholder="Digite o seu nome">
 
-            <label for="email">E-mail: </label>
-            <input type="email" name="email" id="email" placeholder="Ex: seuemail@gmail.com">
+    <header>
+        <img src="img/logo2-512px.png">
+        <h1>gFutureDevs</h1>
+    </header>
 
-            <label for="tel">Telefone: </label>
-            <input type="tel" name="tel" id="tel" pattern="+[0-9]{2}[0-9]{11}" placeholder="+551100000000000">
+    <div class="glass">
 
-            <label for="d-nascimento">Data de nascimento: </label>
-            <input type="date" name="d-nascimento" id="d-nascimento">
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Dados pessoais</legend>
 
-            <input type="radio" name="idade" value="Maior de idade" id="maior-idade">
-            <label for="maior-idade">+18 anos</label>
+                <div class="ql">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" maxlength="100" placeholder="Digite o seu nome">
+                </div>
 
-            <input type="radio" name="idade" value="Menor de idade" id="menor-idade" checked>
-            <label for="menor-idade">-18 anos</label>
+                <div class="ql">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" placeholder="Ex: seuemail@gmail.com">
+                </div>
 
-        </fieldset>
+                <div class="ql">
+                    <label for="tel">Telefone: </label>
+                    <input type="tel" name="tel" id="tel" pattern="+[0-9]{2}[0-9]{11}" placeholder="+551100000000000">
+                </div>
 
-        <fieldset>
+                <div class="ql">
+                    <label for="d-nascimento">Data de nascimento: </label>
+                    <input type="date" name="d-nascimento" id="d-nascimento">
+                </div>
 
-            <legend>Interesses</legend>
+                <div>
+                    <input type="radio" name="idade" value="Maior de idade" id="maior-idade">
+                    <label for="maior-idade">+18 anos</label>
 
-            <input type="checkbox" name="turista" id="turista">
-            <label for="turista">Turista</label>
+                    <input type="radio" name="idade" value="Menor de idade" id="menor-idade" checked>
+                    <label for="menor-idade">-18 anos</label>
+                </div>
 
-            <input type="checkbox" name="residente" id="residente">
-            <label for="residente">Residente</label>
+            </fieldset>
 
-            <input type="checkbox" name="estudante" id="estudante">
-            <label for="estudante">Estudante</label>
+            <fieldset>
 
-        </fieldset>
+                <legend>Interesses</legend>
 
-        <input type="submit" value="Enviar"></input>
-        <button type="reset">Limpar</button>
+                <div class="ql">
+                    <label for="ponto-turistico">Ponto de interesse</label>
+                    <select name="ponto-turistico" id="ponto-turistico">
+                        <option value="">Escolha uma opção</option>
 
-    </form>
+                        <optgroup label="Osasco">
+                            <option value="museu-osasco">Museu de Osasco</option>
+                        </optgroup>
+
+                        <optgroup label="Rio de Janeiro">
+                            <option value="piscinao-ramos">Piscinão de Ramos</option>
+                            <option valeu="cristo-redentor">Cristo Redentor</option>
+
+                        </optgroup>
+
+                        <optgroup label="São Paulo">
+                            <option value="catedral-se">Catedral da Sé</option>
+                            <option value="centro-cidade">Centro da cidade</option>
+                            <option value="MASP">MASP</option>
+                            <option value="monumento-bandeiras">Monumento às Bandeiras</option>
+                            <option value="museu-ipiranga">Museu do Ipiranga</option>
+                            <option value="parque-ibirapuera">Parque Ibirapuera</option>
+                            <option value="ponte-octacio-frias-oliveira">Ponte Octávio Frias de Oliveira</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div>
+
+                    <div>
+                        <input type="checkbox" name="turista" id="turista">
+                        <label for="turista">Turista</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="residente" id="residente">
+                        <label for="residente">Residente</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="estudante" id="estudante">
+                        <label for="estudante">Estudante</label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <div class="button">
+                <!-- <input type="submit" value="Enviar"></input> -->
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </div>
+
+        </form>
+
+    </div>
+
 </body>
+
 </html>
