@@ -47,11 +47,12 @@ let cursos = {
 //cursos.alunoNovo("Patricia", 2, [3, 5, 9]);
 
 //console.log(cursos.listaEstudantes);
+console.log(cursos.listaEstudantes[4]);
 
-//let msg = cursos.aprovacao(cursos.listaEstudantes[0]);
-//console.log(msg);
+let msg = cursos.aprovacao(cursos.listaEstudantes[4]);
+console.log(msg);
 
-let listaTrueFalse = cursos.resultados();
-console.log(listaTrueFalse);
+//let listaTrueFalse = cursos.resultados();
+//console.log(listaTrueFalse);
 
-module.exports = cursos;
+//module.exports = cursos;

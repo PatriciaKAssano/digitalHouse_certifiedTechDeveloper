@@ -15,7 +15,7 @@ function AddAluno(nome_, faltas_, notas_) {
     this.calcularMedia = () => {
         let media = this.notas.reduce((previousValue, currentValue) => previousValue + currentValue) / this.notas.length;
         // A função reduce recebe um callback como parâmetro que por suas vez recebe outros 2 
-        //parâmetros sendo o primeiro o acumulator e o segundo o currentValue (valor do índice atual da iteração do array)
+        //parâmetros sendo o primeiro o previousValue e o segundo o currentValue (valor do índice atual da iteração do array)
         // A função reduce precisa ter um let e return
         return media;
         // let somaNotas = 0;
