@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .4s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+  
+  }
+
+body {
+
+    max-width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(219, 219, 219);
+
+}
+
+
+h1 {
+
+    padding: .5em 1em;
+    color: grey;
+    margin-bottom: 22px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+input {
+
+    border: 1px solid gray;
+
+}
+
+.controlador {
+
+    width: 90%;
+
+}
+
+.controlador small {
+
+    color: red;
+    display: none;
+    font-size: .7em;
+
+}
+
+.controlador.erro input {
+
+    border-color: red;
+
+}
+
+.controlador.erro small {
+
+    display: block;
+
+}
+
+#botaoSalvar:disabled {
+
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+
+}
+
+#botaoSalvar:disabled:hover {
+  
+    transform: none;
+    transition: none;
+
+  }
+
+.botao-tema {
+
+    font-size: 16px;
+    border: 0;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 12px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  
+  }
+  
+  .main-button:hover {
+  
+    transform: scale(1.02);
+
+  }
+
+.form {
+
+    padding: 0.4vh 0;
+    width: 100%;
+    margin: 0.5vh auto;
+    text-align: center;
+    border-radius: 1vw;
+    border-color: grey;
+    background-color: white;
+    color: black;
+
+}
+
+input:hover {
+
+    transform: scale(1.03);
+
+}
+
+h1:hover {
+    color: limegreen;
+    text-shadow: 0px 0px 10px limegreen, 0px 0px 3px limegreen;
+}
+
+.form:hover {
+
+    transition: .5s;
+    background-color: limegreen;
+
+}
+
+.botao {
+
+    box-sizing: border-box;
+    margin-left:center;
+    background-color: rgb(36, 121, 47);
+    color: antiquewhite;
+    width: 11em;
+    border-radius: 1vw;
+    padding: .5rem .2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: .5vh;
+    border: 1px solid ghostwhite;
+    
+}
+
+.botao:hover {
+
+    transform: scale(1.05);
+    transition: .5s;
+    background-color: limegreen;
+  
+  }
+  
+  fieldset {
+    
+    border-radius: 8px;
+    box-shadow: 2px 1px 32px rgba(255, 255, 255, 1);
+    border-style: none;
+    padding: 2vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.1vw;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+
+}
+
+fieldset:nth-child(2) {
+
+    margin-top: 2vh;
+
+}
+
+  h2 {
+
+      font-size: 1.5em;
+      margin: 1em;
+      color: grey;
+
+  }
+
+img {
+
+    width: 100%;
+
+}
+
+h3 {
+
+    font-size: 1.2em;
+    margin-bottom: .2em;
+    color: black;
+    margin-top: 1vh;
+    text-align: center;
+
+}
+
+
+p {
+
+    color: black;
+    font-size: 1em;
+    margin-left: 1vw;
+
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2em 10%;
+
+  }
+
+#conteudoPrincipal {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0.5vh auto;
+    text-align: center;
+    border-radius: 1vw;
+
+}
+
+.item {
+
+    width: 30em;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    
+}
+
+footer {
+
+    background-color: rgb(219, 219, 219);
+    color: black;  
+
+  }
+  
+  ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 0;
+
+}
+
+ul li {
+
+    list-style: none;
+    margin:  1rem;
+
+}
+
+  span {
+      color: antiquewhite;
+      text-align: center;
+
+  }
+
+  .dark {
+
+    background-color: black;
+  
+  }
+
+  
+  .dark h1 {
+  
+    background-color: black;
+    color: rgb(170, 170, 170);
+    border-color:  rgb(39, 39, 39);
+  
+  }
+
+  .dark h1:hover {
+
+    color: limegreen;
+    text-shadow: 0px 0px 10px limegreen, 0px 0px 3px limegreen;
+    
+}
+  
+  .dark .botao-tema {
+  
+    background-color: #202020;
+    color: white;
+  
+  }
+  
+  
+  .dark .item {
+  
+    background-color: rgb(19, 19, 19);
+    border-color: black;
+  
+  }
+  
+  .dark .item h2, .dark .item h3, .dark .item p {
+  
+    color: rgb(230, 230, 230);
+  
+  }
+
+  .dark footer {
+    background-color: black;
+    color: rgb(219, 219, 219);
+  }

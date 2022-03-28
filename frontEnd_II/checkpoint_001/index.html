@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Anime Anima</title>
+
+</head>
+
+<body>
+
+    <button onclick="changeTheme()" class="botao-tema" id="botaoMudarTema">🌙</button>
+        
+            <h1>Anime Anima - Indicações</h1>
+        
+        <form action="/registro" method="post">
+            <fieldset>
+                <div class="controlador">
+                <input type="text" name="titulo" class="form" id="titulo" placeholder="Título" required>
+                <small>Por favor, preencha o campo "Título".</small>
+                
+            </div>
+
+            <div class="controlador">
+                <input type="text" name="descricao" class="form" id="descricao" placeholder="Descrição" required>
+                <small>Por favor, preencha o campo "Descrição".</small>
+            </div>
+
+            <div class="controlador">
+                <input type="url" name="urlDaImagem" class="form" id="imagem" placeholder="URL da imagem" required>
+                <small>Por favor, preencha o campo "URL da imagem".</small>
+            </div>
+
+                <button type="submit" class="botao" id="botaoSalvar" disabled>Salvar</button>
+            </fieldset>
+        </form>
+
+    </div>
+
+    <h2>Postagens</h2>
+
+    <main class="container" id="conteudoPrincipal">
+
+    </main>
+
+    <footer>
+        <ul>
+            <li>&copy; 2022 Todos os direitos reservados | Frontend II - Checkpoint I
+                | Alisson Pinho, Patricia Kushima Assano, Peterson Alves dos Santos</li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
