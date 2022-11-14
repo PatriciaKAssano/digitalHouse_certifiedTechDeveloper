@@ -20,6 +20,13 @@ function Form(props) {
         // }
         if (props.testName.length < 3) {
             props.setFormError(true)
+            alert("Por favor, insira um nome de exame com no mínimo, 3 caracteres!")
+            return
+        }
+
+        if (props.testName[0] == " ") {
+            props.setFormError(true)
+            alert("Por favor, o nome não pode conter espaços em branco no início!")
             return
         }
 

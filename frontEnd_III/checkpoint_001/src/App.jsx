@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './Card';
-import Form from './Form';
+import Card from './components/Card';
+import Form from './components/Form';
 
 function App() {
 
@@ -61,7 +61,7 @@ function App() {
       } */}
 
 <section>
-            <h1>Exames</h1>
+            <h2>Exames</h2>
             <div className="test-cards">
                 {
                     tests.map((test, index) => {
