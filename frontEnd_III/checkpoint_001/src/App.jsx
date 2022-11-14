@@ -10,7 +10,7 @@ function App() {
   const [doctorName, setDoctorName] = useState("")
   const [medicalLicenseNumber, setMedicalLicenseNumber] = useState("")
   const [testModality, setTestModality] = useState("")
-  const [accessionNumber, setAccessionNumber] = useState("")
+  const [accessionIdentification, setAccessionIdentification] = useState("")
   const [formError, setFormError] = useState(false)
 
   const [tests, setTests] = useState([]);
@@ -21,7 +21,7 @@ function App() {
   //   doctorName: 'Noah Caleb Mateus da Cruz',
   //   medicalLicenseNumber: '184173',
   //   testModality: 'Análises clínicas',
-  //   accessionNumber: '131240988'
+  //   accessionIdentification: '131240988'
   // }
 
 
@@ -36,7 +36,7 @@ function App() {
         doctorName={doctorName}
         medicalLicenseNumber={medicalLicenseNumber}
         testModality={testModality}
-        accessionNumber={accessionNumber}
+        accessionIdentification={accessionIdentification}
         tests={tests}
         formError={formError}
         setTestName={setTestName}
@@ -44,7 +44,7 @@ function App() {
         setDoctorName={setDoctorName}
         setMedicalLicenseNumber={setMedicalLicenseNumber}
         setTestModality={setTestModality}
-        setAccessionNumber={setAccessionNumber}
+        setAccessionIdentification={setAccessionIdentification}
         setTests={setTests}
         setFormError={setFormError}
 

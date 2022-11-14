@@ -6,7 +6,7 @@ function Card(props) {
             <p>{props.test.doctorName}</p>
             <p>{props.test.medicalLicenseNumber}</p>
             <p>{props.test.testModality}</p>
-            <p>{props.test.accessionNumber}</p>
+            <p>{props.test.accessionIdentification}</p>
         </div>
     )
 }

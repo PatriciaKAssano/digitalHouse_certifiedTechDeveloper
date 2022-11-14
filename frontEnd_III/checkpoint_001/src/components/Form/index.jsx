@@ -9,11 +9,11 @@ function Form(props) {
             doctorName: props.doctorName,
             medicalLicenseNumber: props.medicalLicenseNumber,
             testModality: props.testModality,
-            accessionNumber: props.accessionNumber,
+            accessionIdentification: props.accessionIdentification,
         }
 
 
-        // if (props.testName == "" || props.testDate == "" || props.doctorName == "" || props.medicalLicenseNumber == "" || props.testModality == "" || props.accessionNumber == "") {
+        // if (props.testName == "" || props.testDate == "" || props.doctorName == "" || props.medicalLicenseNumber == "" || props.testModality == "" || props.accessionIdentification == "") {
         //     props.setFormError(true)
         //     return
         //     //alert("Por favor, preencha todos os campos para salvar o resultado do exame");
@@ -41,7 +41,7 @@ function Form(props) {
             doctorName: props.doctorName,
             medicalLicenseNumber: props.medicalLicenseNumber,
             testModality: props.testModality,
-            accessionNumber: props.accessionNumber,
+            accessionIdentification: props.accessionIdentification,
         }])
 
         props.setTestName("")
@@ -49,13 +49,14 @@ function Form(props) {
         props.setDoctorName("")
         props.setMedicalLicenseNumber("")
         props.setTestModality("")
-        props.setAccessionNumber("")
+        props.setAccessionIdentification("")
 
     }
 
 
     return (
         <div className="App">
+            <fieldset>
             <h2>Salvar novo resultado de exame</h2>
             <form className={props.formError ? "form-error" : ""} onSubmit={event => saveTest(event)}>
                 <fieldset>
@@ -87,6 +88,8 @@ function Form(props) {
                         value={props.doctorName}
                         onChange={(event) => props.setDoctorName(event.target.value)}
                         placeholder="Digite o nome completo do(a) doutor(a)"
+                        pattern="^[^\x00-\x1f\x21-\x26\x28-\x2d\x2f-\x40\x5b-\x60\x7b-\xff]+$"
+                        title="O nome não pode conter números ou caracteres especiais."
                         required="required"
                     />
                 </fieldset>
@@ -109,17 +112,21 @@ function Form(props) {
                         value={props.testModality}
                         onChange={(event) => props.setTestModality(event.target.value)}
                         placeholder="Digite a modalidade do teste"
+                        pattern="^[^\x00-\x1f\x21-\x26\x28-\x2d\x2f-\x40\x5b-\x60\x7b-\xff]+$"
+                        title="A modalidade não pode conter números ou caracteres especiais."
                         required="required"
                     />
                 </fieldset>
 
                 <fieldset>
-                    <label htmlFor="accessionNumber">Protocolo</label>
+                    <label htmlFor="accessionIdentification">Protocolo</label>
                     <input
-                        type="number"
-                        value={props.accessionNumber}
-                        onChange={(event) => props.setAccessionNumber(event.target.value)}
+                        type="text"
+                        value={props.accessionIdentification}
+                        onChange={(event) => props.setAccessionIdentification(event.target.value)}
                         placeholder="Digite o número do protocolo"
+                        pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$"
+                        title="O protocolo deve conter deve conter pelo menos uma letra, um número e seis caracteres."
                         required="required"
                     />
                 </fieldset>
@@ -133,7 +140,7 @@ function Form(props) {
                     <small><strong>Por favor, verifique os dados inseridos no formulário</strong></small>
                 ) : null
             }
-
+</fieldset>
         </div>
     )
 }
