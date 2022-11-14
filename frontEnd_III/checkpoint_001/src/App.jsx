@@ -11,6 +11,7 @@ function App() {
   const [medicalLicenseNumber, setMedicalLicenseNumber] = useState("")
   const [testModality, setTestModality] = useState("")
   const [accessionNumber, setAccessionNumber] = useState("")
+  const [formError, setFormError] = useState(false)
 
   const [tests, setTests] = useState([]);
 
@@ -37,6 +38,7 @@ function App() {
         testModality={testModality}
         accessionNumber={accessionNumber}
         tests={tests}
+        formError={formError}
         setTestName={setTestName}
         setTestDate={setTestDate}
         setDoctorName={setDoctorName}
@@ -44,17 +46,32 @@ function App() {
         setTestModality={setTestModality}
         setAccessionNumber={setAccessionNumber}
         setTests={setTests}
+        setFormError={setFormError}
+
       />
 
       {/* <div>{JSON.stringify(tests)}</div> */}
 
-      {
+      {/* {
         tests.map((test) => {
           return (
             <Card test={test} />
           )
         })
-      }
+      } */}
+
+<section>
+            <h1>Exames</h1>
+            <div className="test-cards">
+                {
+                    tests.map((test, index) => {
+                        return (
+                            <Card key={index} test={test} />
+                        )
+                    })
+                }
+            </div>
+        </section>
     </div>
   )
 
