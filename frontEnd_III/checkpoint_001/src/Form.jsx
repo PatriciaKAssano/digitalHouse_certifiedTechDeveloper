@@ -3,14 +3,14 @@ function Form(props) {
     function saveTest(event) {
         event.preventDefault()
 
-        props.setTests([...props.tests, {
+        let test = {
             testName: props.testName,
             testDate: props.testDate,
             doctorName: props.doctorName,
             medicalLicenseNumber: props.medicalLicenseNumber,
             testModality: props.testModality,
             accessionNumber: props.accessionNumber,
-        }])
+        }
 
 
         // if (props.testName == "" || props.testDate == "" || props.doctorName == "" || props.medicalLicenseNumber == "" || props.testModality == "" || props.accessionNumber == "") {
@@ -26,7 +26,16 @@ function Form(props) {
 
         props.setFormError(false)
 
-        props.setTests([...tests, test])
+        //props.setTests([...tests, test])
+
+        props.setTests([...props.tests, {
+            testName: props.testName,
+            testDate: props.testDate,
+            doctorName: props.doctorName,
+            medicalLicenseNumber: props.medicalLicenseNumber,
+            testModality: props.testModality,
+            accessionNumber: props.accessionNumber,
+        }])
 
         props.setTestName("")
         props.setTestDate("")
@@ -78,7 +87,7 @@ function Form(props) {
                 <fieldset>
                     <label htmlFor="medicalLicenseNumber">CRM</label>
                     <input
-                        text="number"
+                        type="number"
                         value={props.medicalLicenseNumber}
                         onChange={(event) => props.setMedicalLicenseNumber(event.target.value)}
                         placeholder="Digite o CRM do(a) doutor(a)"
@@ -99,12 +108,13 @@ function Form(props) {
 
                 <fieldset>
                     <label htmlFor="accessionNumber">Protocolo</label>
-                <input
-                    value={props.accessionNumber}
-                    onChange={(event) => props.setAccessionNumber(event.target.value)}
-                    placeholder="Digite o número do protocolo"
-                    required="required"
-                />
+                    <input
+                        type="number"
+                        value={props.accessionNumber}
+                        onChange={(event) => props.setAccessionNumber(event.target.value)}
+                        placeholder="Digite o número do protocolo"
+                        required="required"
+                    />
                 </fieldset>
 
                 <button type="submit">Salvar</button>
