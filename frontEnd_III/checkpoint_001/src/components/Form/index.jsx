@@ -1,3 +1,6 @@
+//import {useState} from 'react';
+import styles from './styles.css';
+
 function Form(props) {
 
     function saveTest(event) {
@@ -86,7 +89,7 @@ function Form(props) {
                     <input
                         type="text"
                         value={props.doctorName}
-                        onChange={(event) => props.setDoctorName(event.target.value)}
+                        onChange={(event) => props.setDoctorName(event.target.value)} 
                         placeholder="Digite o nome completo do(a) doutor(a)"
                         pattern="^[^\x00-\x1f\x21-\x26\x28-\x2d\x2f-\x40\x5b-\x60\x7b-\xff]+$"
                         title="O nome não pode conter números ou caracteres especiais."
