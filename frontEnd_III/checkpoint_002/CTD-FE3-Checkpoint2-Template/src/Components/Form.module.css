@@ -13,3 +13,19 @@
 .inputSpacing+.inputSpacing{
   margin: 1rem 0;
 }
+
+.container_input {
+  border: 1px solid #cacaca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_input input {
+  flex: 1;
+}
+
+.icon {
+  padding: 0 10px;
+  cursor: pointer;
+}

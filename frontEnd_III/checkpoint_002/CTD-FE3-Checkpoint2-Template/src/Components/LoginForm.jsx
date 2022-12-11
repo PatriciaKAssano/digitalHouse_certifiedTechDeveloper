@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 import styles from "./Form.module.css";
 
+import { FiEye, FiEyeOff } from "react-icons/fi";
+import { Form } from "react-router-dom";
+
+
+
 const LoginForm = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const handleSubmit = (e) => {
     //Nesse handlesubmit você deverá usar o preventDefault,
     //enviar os dados do formulário e enviá-los no corpo da requisição 
@@ -10,6 +18,10 @@ const LoginForm = () => {
     //Com tudo ocorrendo corretamente, o usuário deve ser redirecionado a página principal,com react-router
     //Lembre-se de usar um alerta para dizer se foi bem sucedido ou ocorreu um erro
   };
+
+  function handleVisible(){
+    setIsVisible(!isVisible);
+  }
 
   return (
     <>
@@ -26,13 +38,21 @@ const LoginForm = () => {
               name="login"
               required
             />
-            <input
-              className={`form-control ${styles.inputSpacing}`}
-              placeholder="Password"
-              name="password"
-              type="password"
-              required
-            />
+
+            <div className={styles.container_input}>
+              <input
+                className={`form-control ${styles.inputSpacing}`}
+                placeholder="Password"
+                name="password"
+                type={isVisible ? "text" : "password"}
+                required
+              />
+              <div className={styles.icon} onClick={handleVisible}>
+
+                {isVisible ? <FiEye /> : <FiEyeOff />}
+
+              </div>
+            </div>
             <button className="btn btn-primary" type="submit">
               Send
             </button>
