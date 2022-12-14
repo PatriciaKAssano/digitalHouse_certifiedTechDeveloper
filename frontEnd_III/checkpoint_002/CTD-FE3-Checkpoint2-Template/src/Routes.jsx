@@ -6,13 +6,13 @@ import Detail from "./Routes/Detail";
 
 const AppRoutes = () => {
     return (
-        <BrowserRouter>
+        
             <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/dentist/:registration" element={<Detail />} />
             </Routes>
-        </BrowserRouter>
+        
     );
 };
 

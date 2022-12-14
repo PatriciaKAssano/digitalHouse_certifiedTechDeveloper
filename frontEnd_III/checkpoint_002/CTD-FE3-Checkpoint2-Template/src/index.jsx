@@ -7,13 +7,21 @@ import Footer from "./Components/Footer";
 import "./index.css";
 
 import AppRoutes from "./Routes";
+import AuthProvider from "./Providers/AuthContext";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //Lembre-se de configurar suas rotas e seu contexto aqui
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <AppRoutes />
-    <Footer />
+    <BrowserRouter>
+
+      <AuthProvider>
+        <Navbar />
+        <AppRoutes />
+        <Footer />
+      </AuthProvider>
+
+    </BrowserRouter>
   </React.StrictMode>
 );
